@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog to PDF Converter</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* Full background */
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Card Container */
+    .container {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 50px 45px;
+      width: 420px;
+      text-align: center;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .container:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 45px rgba(0, 0, 0, 0.25);
+    }
+
+    /* Title */
+    h2 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      font-weight: 700;
+      font-size: 1.8em;
+      color: #222;
+      margin-bottom: 35px;
+    }
+
+    h2::before {
+      content: "📰";
+      font-size: 1.5em;
+    }
+
+    /* Input Field */
+    input[type="url"] {
+      width: 100%;
+      padding: 15px;
+      border: 2px solid #ddd;
+      border-radius: 12px;
+      font-size: 1em;
+      outline: none;
+      background-color: #fff;
+      box-sizing: border-box;
+      margin-bottom: 20px;
+      transition: all 0.3s ease;
+    }
+
+    input[type="url"]:focus {
+      border-color: #6a11cb;
+      box-shadow: 0 0 10px rgba(106, 17, 203, 0.2);
+    }
+
+    /* Button */
+    button {
+      width: 100%;
+      padding: 15px;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: #fff;
+      font-weight: 600;
+      font-size: 1em;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      background: linear-gradient(135deg, #5b7cfa, #8a52d1);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      transform: translateY(-2px);
+    }
+
+    /* Footer */
+    .footer {
+      margin-top: 25px;
+      font-size: 0.9em;
+      color: #666;
+      letter-spacing: 0.3px;
+    }
+
+    /* Responsive */
+    @media (max-width: 480px) {
+      .container {
+        width: 90%;
+        padding: 40px 25px;
+      }
+      h2 {
+        font-size: 1.5em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Blog to PDF Converter</h2>
+    <form>
+      <input type="url" id="blogUrl" placeholder="Paste your blog URL here..." required />
+      <button type="submit">Convert to PDF</button>
+    </form>
+    <div class="footer">Powered by Minimalists</div>
+  </div>
+</body>
+<script src="script.js"></script>
+
+</html>
